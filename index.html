@@ -3,115 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Computer Software Guide | UTC Leeds Staff</title>
+<title>Computer Software Guide — UTC Leeds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="layout">
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-      <p class="brand">UTC Leeds</p>
-      <h1 class="brand-sub">Software Guide</h1>
-      <p class="brand-desc">A staff reference for the categories of software used across college systems.</p>
+<div class="page">
 
-      <nav class="toc" aria-label="Section navigation">
-        <a href="#operating-system">Operating system software</a>
-        <a href="#system-software">System software</a>
-        <a href="#creative-software">Creative software</a>
-        <a href="#utility-software">Utility software</a>
-        <a href="#productivity">Productivity &amp; office suites</a>
-        <a href="#dbms">Database management systems</a>
-        <a href="#web-browsers">Web browsers</a>
-        <a href="#application-software">Application software</a>
-      </nav>
+  <!-- ===== Sidebar index ===== -->
+  <nav class="index" aria-label="Section index">
+    <div class="index-head">
+      <span class="index-mark">UTC</span>
+      <span class="index-title">Software Guide</span>
     </div>
-  </aside>
+    <ol class="index-list">
+      <li><a href="#operating-system"><span class="index-num">§1</span>Operating system software</a></li>
+      <li><a href="#system-software"><span class="index-num">§2</span>System software</a></li>
+      <li><a href="#creative-software"><span class="index-num">§3</span>Creative software</a></li>
+      <li><a href="#utility-software"><span class="index-num">§4</span>Utility software</a></li>
+      <li><a href="#productivity"><span class="index-num">§5</span>Productivity &amp; office suites</a></li>
+      <li><a href="#dbms"><span class="index-num">§6</span>Database management systems</a></li>
+      <li><a href="#web-browsers"><span class="index-num">§7</span>Web browsers</a></li>
+      <li><a href="#application-software"><span class="index-num">§8</span>Application software</a></li>
+    </ol>
+    <div class="index-foot">For staff reference · UTC Leeds IT</div>
+  </nav>
 
-  <main class="content">
+  <!-- ===== Main content ===== -->
+  <main id="main">
 
-    <header class="content-header">
-      <p class="kicker">Staff reference</p>
-      <h2>Understanding the software running on a UTC Leeds machine</h2>
-      <p class="intro">Every device you use is built from layers of software, each doing a different job &mdash; from the operating system that starts the machine, down to the browser you open to reach a lesson resource. This guide walks through each layer in plain terms, with the examples you're most likely to come across on site.</p>
+    <header class="hero">
+      <p class="hero-kicker">Staff reference document</p>
+      <h1>The general computer<br>software guide</h1>
+      <p class="hero-lede">Eight categories of software every UTC Leeds staff member relies on — what each one does, how it differs from the rest, and where you'll meet it day to day.</p>
+
+      <figure class="stack-diagram" aria-labelledby="stack-caption">
+        <svg viewBox="0 0 640 220" role="img" aria-label="Diagram of software layers, from hardware at the bottom up to applications at the top">
+          <!-- Hardware -->
+          <rect x="20" y="168" width="600" height="40" rx="4" class="stack-layer stack-hardware"/>
+          <text x="320" y="193" class="stack-label stack-label-light">Hardware</text>
+
+          <!-- Operating system -->
+          <rect x="20" y="118" width="600" height="40" rx="4" class="stack-layer stack-os"/>
+          <text x="320" y="143" class="stack-label stack-label-light">Operating system</text>
+
+          <!-- System software -->
+          <rect x="20" y="68" width="600" height="40" rx="4" class="stack-layer stack-sys"/>
+          <text x="320" y="93" class="stack-label stack-label-dark">System software</text>
+
+          <!-- Applications -->
+          <rect x="20" y="18" width="600" height="40" rx="4" class="stack-layer stack-apps"/>
+          <text x="140" y="43" class="stack-label stack-label-dark">Applications</text>
+          <text x="320" y="43" class="stack-label stack-label-dark stack-label-muted">Office · Creative · Utility · Browsers · DBMS</text>
+
+          <line x1="20" y1="10" x2="20" y2="208" class="stack-guide"/>
+          <text x="8" y="14" class="stack-axis">closer to you</text>
+          <text x="8" y="216" class="stack-axis">closer to the hardware</text>
+        </svg>
+        <figcaption id="stack-caption">Every application in this guide sits on top of the operating system, which in turn controls the hardware underneath it.</figcaption>
+      </figure>
     </header>
 
     <section id="operating-system" class="entry">
-      <div class="entry-marker" style="--accent:#3B6E8F"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="6" y="8" width="28" height="20" rx="2"/>
+          <circle cx="11" cy="12.5" r="0.9" fill="currentColor" stroke="none"/>
+          <circle cx="14.5" cy="12.5" r="0.9" fill="currentColor" stroke="none"/>
+          <line x1="6" y1="15" x2="34" y2="15"/>
+          <path d="M16 33 L24 33"/>
+          <path d="M20 28 L20 33"/>
+        </svg>
+        <span class="entry-tag">01</span>
+      </div>
       <div class="entry-body">
-        <h3>Operating system software</h3>
-        <p>The operating system is the software that runs the software. Think of it as the foundation everything else sits on: it gives you a graphical interface so the computer is intuitive to use, especially if you're new to it, and it controls every individual component in the machine &mdash; the screen, the storage, the network card, the keyboard.</p>
-        <p class="examples"><span>Examples</span> Microsoft Windows &middot; Linux &middot; macOS</p>
+        <h2>Operating system software</h2>
+        <p>The operating system is the primary software running on a computer — think of it as the software that runs the other software. It provides the graphical interface that makes a machine intuitive to use, which matters most for people new to computing, and it controls every individual hardware component underneath.</p>
+        <ul class="entry-examples">
+          <li>Microsoft Windows</li>
+          <li>Linux</li>
+          <li>macOS</li>
+        </ul>
       </div>
     </section>
 
     <section id="system-software" class="entry">
-      <div class="entry-marker" style="--accent:#3B6E8F"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="6.5"/>
+          <path d="M20 8.5v3.4M20 28.1v3.4M31.5 20h-3.4M11.9 20H8.5M28.1 11.9l-2.4 2.4M14.3 25.7l-2.4 2.4M28.1 28.1l-2.4-2.4M14.3 14.3l-2.4-2.4"/>
+        </svg>
+        <span class="entry-tag">02</span>
+      </div>
       <div class="entry-body">
-        <h3>System software</h3>
-        <p>System software is a type of program designed to run, manage and control computer hardware, while providing a platform for other programs to run on top of. Its job is to sit between the physical hardware and the person using it, making the computer easier to control.</p>
+        <h2>System software</h2>
+        <p>System software is a category of program designed to run, manage and control computer hardware while giving applications a stable platform to run on. Its job is to sit as a layer between the physical hardware and the user, so the machine is easier to control.</p>
       </div>
     </section>
 
     <section id="creative-software" class="entry">
-      <div class="entry-marker" style="--accent:#B5762B"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M27 8c2.2 0 4 1.8 4 4 0 1.6-.9 3-2.3 3.6L15.5 28.8l-6.3 1.5 1.5-6.3L23.9 10.8C24.5 9.2 25.6 8 27 8Z"/>
+          <path d="M22 13l5 5"/>
+        </svg>
+        <span class="entry-tag">03</span>
+      </div>
       <div class="entry-body">
-        <h3>Creative software</h3>
-        <p>Creative software covers the applications used to design, edit and manage artistic or multimedia content. It's usually built by large software companies with an extensive range of settings, so the work can be finely tuned to whatever the user needs. Adobe Creative Cloud is a good example: a package containing several tools bundled together, including photo and video editors and a 3D &amp; VFX editor.</p>
-        <p class="examples"><span>Examples</span> Adobe Photoshop &middot; Premiere Pro &middot; Blender</p>
+        <h2>Creative software</h2>
+        <p>Creative software covers digital applications built to help individuals and professional teams design, edit and manage artistic or multimedia content. It's usually produced by large software companies and comes with an extensive range of settings, so the work can be fine-tuned to the exact needs of the user.</p>
+        <ul class="entry-examples">
+          <li>Adobe Creative Cloud</li>
+          <li>Photo &amp; video editors</li>
+          <li>3D &amp; VFX tools</li>
+        </ul>
       </div>
     </section>
 
     <section id="utility-software" class="entry">
-      <div class="entry-marker" style="--accent:#B5762B"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M26.8 15.4a5.6 5.6 0 0 1-7.3 6.6l-8.9 8.9a2.1 2.1 0 0 1-3-3l8.9-8.9a5.6 5.6 0 0 1 6.6-7.3l-4 4 1.7 1.7 4-4Z"/>
+        </svg>
+        <span class="entry-tag">04</span>
+      </div>
       <div class="entry-body">
-        <h3>Utility software</h3>
-        <p>Utility software is used to maintain, optimise and protect a device. This is the software working quietly in the background &mdash; keeping the machine secure, keeping files organised, keeping storage tidy.</p>
-        <p class="examples"><span>Examples</span> Windows Defender &middot; WinRAR &middot; CCleaner</p>
+        <h2>Utility software</h2>
+        <p>Utility software is a set of tools designed to maintain, optimise and protect digital devices — covering everything from security to file compression to disk cleanup.</p>
+        <ul class="entry-examples">
+          <li>Windows Defender</li>
+          <li>WinRAR</li>
+          <li>CCleaner</li>
+        </ul>
       </div>
     </section>
 
     <section id="productivity" class="entry">
-      <div class="entry-marker" style="--accent:#4B8B6F"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M13 6h11l6 6v22a1 1 0 0 1-1 1H13a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z"/>
+          <path d="M24 6v6h6"/>
+          <line x1="15.5" y1="20" x2="24.5" y2="20"/>
+          <line x1="15.5" y1="24.5" x2="24.5" y2="24.5"/>
+          <line x1="15.5" y1="29" x2="21" y2="29"/>
+        </svg>
+        <span class="entry-tag">05</span>
+      </div>
       <div class="entry-body">
-        <h3>Productivity &amp; office suites</h3>
-        <p>Applications built for creating documents, organising data and handling everyday business or school workflows &mdash; the tools you'll use for coursework, reports and day-to-day admin.</p>
-        <p class="examples"><span>Examples</span> Microsoft Word &middot; Excel &middot; PowerPoint</p>
+        <h2>Productivity &amp; office suites</h2>
+        <p>These are applications tailored for creating documents, organising data and running everyday business workflows — the tools most staff open first thing every morning.</p>
+        <ul class="entry-examples">
+          <li>Microsoft Word</li>
+          <li>Excel</li>
+          <li>PowerPoint</li>
+        </ul>
       </div>
     </section>
 
     <section id="dbms" class="entry">
-      <div class="entry-marker" style="--accent:#4B8B6F"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <ellipse cx="20" cy="11" rx="11" ry="4.2"/>
+          <path d="M9 11v8.5c0 2.3 4.9 4.2 11 4.2s11-1.9 11-4.2V11"/>
+          <path d="M9 19.5V28c0 2.3 4.9 4.2 11 4.2s11-1.9 11-4.2v-8.5"/>
+        </svg>
+        <span class="entry-tag">06</span>
+      </div>
       <div class="entry-body">
-        <h3>Database management systems (DBMS)</h3>
-        <p>A DBMS is used to store, modify, extract and organise large amounts of structured data. Beyond just storage, it also handles data security, backup and recovery, and keeps that data accurate and consistent over time.</p>
-        <p class="examples"><span>Examples</span> MySQL &middot; MongoDB</p>
+        <h2>Database management systems (DBMS)</h2>
+        <p>A DBMS is software used to store, modify, extract and organise large amounts of structured data. It also handles related tasks such as securing data, backup and recovery, and maintaining data integrity.</p>
+        <ul class="entry-examples">
+          <li>MySQL</li>
+          <li>MongoDB</li>
+        </ul>
       </div>
     </section>
 
     <section id="web-browsers" class="entry">
-      <div class="entry-marker" style="--accent:#8A4F9E"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="13"/>
+          <ellipse cx="20" cy="20" rx="5.2" ry="13"/>
+          <line x1="7" y1="20" x2="33" y2="20"/>
+          <path d="M9.5 12.5c2.7 1.8 6.6 2.9 10.5 2.9s7.8-1.1 10.5-2.9"/>
+          <path d="M9.5 27.5c2.7-1.8 6.6-2.9 10.5-2.9s7.8 1.1 10.5 2.9"/>
+        </svg>
+        <span class="entry-tag">07</span>
+      </div>
       <div class="entry-body">
-        <h3>Web browsers</h3>
-        <p>The interface software used to access, navigate and display information on the internet. Browsers are some of the most-used software in existence, giving access to servers and computers right across the globe.</p>
-        <p class="examples"><span>Examples</span> Google Chrome &middot; Apple Safari &middot; Microsoft Edge</p>
+        <h2>Web browsers</h2>
+        <p>A browser is the interface software used to access, navigate and display information on the internet. It's one of the most-used categories of software, since it provides access to servers and computers across the globe.</p>
+        <ul class="entry-examples">
+          <li>Google Chrome</li>
+          <li>Apple Safari</li>
+          <li>Microsoft Edge</li>
+        </ul>
       </div>
     </section>
 
     <section id="application-software" class="entry">
-      <div class="entry-marker" style="--accent:#8A4F9E"></div>
+      <div class="entry-icon">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <rect x="7" y="7" width="11" height="11" rx="2"/>
+          <rect x="22" y="7" width="11" height="11" rx="2"/>
+          <rect x="7" y="22" width="11" height="11" rx="2"/>
+          <rect x="22" y="22" width="11" height="11" rx="2"/>
+        </svg>
+        <span class="entry-tag">08</span>
+      </div>
       <div class="entry-body">
-        <h3>Application software</h3>
-        <p>Application software is a program designed to help users carry out specific personal, educational or business tasks. A word processor is a good example: it's used to write and edit text documents, and is a staple in businesses of every size.</p>
+        <h2>Application software</h2>
+        <p>Application software is a computer program designed to help users carry out specific personal, educational or business tasks. A word processor is a good example — it's used for writing and editing text documents, and is a staple of both large and small businesses.</p>
       </div>
     </section>
 
-    <footer class="content-footer">
-      <p>UTC Leeds &middot; Internal staff resource</p>
+    <footer class="page-footer">
+      <p>UTC Leeds — Computer Software Guide</p>
     </footer>
 
   </main>
