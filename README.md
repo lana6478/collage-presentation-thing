@@ -1,2 +1,3 @@
 # bored-at-collage
-no idea what this is going to be 
+a test website project thing
+
